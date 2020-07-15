@@ -1,0 +1,4 @@
+name: headless-wordpress
+recipe: wordpress
+config:
+  webroot: web

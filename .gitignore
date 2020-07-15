@@ -1,8 +1,10 @@
+.DS_Store
 .env
 .env.*
 *.log
 /vendor
 web/.htaccess
+web/app/languages/*
 web/app/mu-plugins/*/
 web/app/plugins/*
 web/app/upgrade
@@ -13,3 +15,4 @@ wp-cli.local.yml
 !.env.example
 !web/app/plugins/.gitkeep
 !web/app/uploads/.gitkeep
+!web/app/languages/.gitkeep

@@ -86,7 +86,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Admin\\": "web/app/themes/admin/classes"
+      "Headless\\": "web/app/themes/headless/classes"
     }
   }
 }

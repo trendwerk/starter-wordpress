@@ -1,4 +1,4 @@
 <?php
 namespace Headless;
 
-Admin::init();
+require 'lib/admin.php';

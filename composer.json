@@ -84,10 +84,5 @@
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
     ]
-  },
-  "autoload": {
-    "psr-4": {
-      "Headless\\": "web/app/themes/headless/classes"
-    }
   }
 }

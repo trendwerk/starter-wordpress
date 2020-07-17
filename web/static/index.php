@@ -8,6 +8,6 @@ $args = array_merge($_GET, ['fit' => 'crop']);
 
 League\Glide\ServerFactory::create([
     'base_url' => 'static',
-    'cache' => $dir . '/web/app/uploads/.glide-cache',
+    'cache' => $dir . '/web/app/uploads/.cache',
     'source' => $dir . '/web/app/uploads',
 ])->outputImage($path, $args);

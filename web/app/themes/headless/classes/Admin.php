@@ -95,3 +95,5 @@ class Admin
         unset($menu[$currentPosition]);
     }
 }
+
+add_filter('intermediate_image_sizes_advanced', '__return_empty_array');

@@ -2,7 +2,7 @@
   "name": "trendwerk/headless-wordpress",
   "type": "project",
   "license": "MIT",
-  "description": "Opinionated starter project to use WordPress as a headless CSM.",
+  "description": "Opinionated starter project to use WordPress as a headless CMS.",
   "homepage": "https://trendwerk.nl",
   "authors": [
     {

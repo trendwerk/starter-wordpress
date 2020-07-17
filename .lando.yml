@@ -2,3 +2,13 @@ name: headless-wordpress
 recipe: wordpress
 config:
   webroot: web
+services:
+  deployment:
+    type: ruby
+    build:
+      - gem install capistrano
+      - gem install capistrano-composer
+      - gem install capistrano-wpcli
+tooling:
+  cap:
+    service: deployment

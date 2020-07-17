@@ -16,6 +16,7 @@ class Admin
             remove_menu_page('tools.php');
 
             if (!current_user_can('administrator')) {
+                remove_menu_page('edit.php?post_type=acf-field-group');
                 remove_menu_page('plugins.php');
             }
         });

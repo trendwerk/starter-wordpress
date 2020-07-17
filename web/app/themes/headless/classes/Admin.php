@@ -12,8 +12,8 @@ class Admin
 
             remove_menu_page('edit-comments.php');
             remove_menu_page('edit.php');
+            remove_menu_page('index.php');
             remove_menu_page('tools.php');
-            remove_submenu_page('index.php', 'update-core.php');
 
             if (!current_user_can('administrator')) {
                 remove_menu_page('plugins.php');
@@ -27,20 +27,6 @@ class Admin
             $adminBar->remove_menu('new-media');
             $adminBar->remove_menu('new-user');
         }, 100);
-
-        // Remove dashboard widgets
-        add_action('wp_dashboard_setup', function () {
-            global $wp_meta_boxes;
-
-            unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity']);
-            unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
-            unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
-            unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
-            unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts']);
-            unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
-            unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
-            unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
-        });
 
         // Remove update notice
         add_action('admin_head', function () {
@@ -66,6 +52,25 @@ class Admin
             require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
             activate_plugin('advanced-custom-fields-pro/acf.php');
+        });
+
+        // Go to pages overview after logging in,
+        // instead of the useless dashboard
+        add_filter('login_redirect', function ($to, $_, $user) {
+            if (is_wp_error($user)) {
+                return $to;
+            }
+
+            if ($to === admin_url()) {
+                return admin_url('edit.php?post_type=page');
+            }
+
+            return $to;
+        }, 10, 3);
+        add_action('admin_init', function () {
+            if ($GLOBALS['pagenow'] === 'index.php') {
+                wp_redirect('edit.php?post_type=page');
+            }
         });
     }
 

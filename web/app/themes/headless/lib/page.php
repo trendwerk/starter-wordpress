@@ -36,5 +36,6 @@ add_action('acf/init', function () use ($postType) {
             'operator' => '==',
             'value' => $postType,
         ]]],
+        'graphql_field_name' => 'fields'
     ]);
 });

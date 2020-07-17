@@ -14,6 +14,10 @@ class Admin
             remove_menu_page('edit.php');
             remove_menu_page('index.php');
             remove_menu_page('tools.php');
+            remove_submenu_page('options-general.php', 'options-discussion.php');
+            remove_submenu_page('options-general.php', 'options-media.php');
+            remove_submenu_page('options-general.php', 'options-privacy.php');
+            remove_submenu_page('options-general.php', 'options-writing.php');
 
             if (!current_user_can('administrator')) {
                 remove_menu_page('edit.php?post_type=acf-field-group');

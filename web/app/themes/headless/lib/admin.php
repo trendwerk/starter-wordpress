@@ -75,6 +75,32 @@ add_action('admin_init', function () {
     }
 });
 
+// Disable deactivation of plugins
+add_filter('plugin_action_links', function ($actions) {
+    if (WP_ENV === 'development') {
+        return $actions;
+    }
+
+    if (isset($actions['deactivate'])) {
+        unset($actions['deactivate']);
+    }
+
+    return $actions;
+});
+
+add_filter('bulk_actions-plugins', function ($actions) {
+    if (WP_ENV === 'development') {
+        return $actions;
+    }
+
+    if (isset($actions['deactivate-selected'])) {
+        unset($actions['deactivate-selected']);
+    }
+
+    return $actions;
+});
+
+
 function moveMenuItem($page, $newPosition) {
     global $menu;
 

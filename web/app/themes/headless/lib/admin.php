@@ -3,8 +3,9 @@ namespace Headless;
 
 // Remove and move admin menu items
 add_action('admin_menu', function () {
-    moveMenuItem('edit.php?post_type=page', 50);
-    moveMenuItem('upload.php', 58);
+    moveMenuItem('edit.php?post_type=page', 5);
+    moveMenuItem('themes.php', 62);
+    moveMenuItem('upload.php', 61);
 
     remove_menu_page('edit-comments.php');
     remove_menu_page('edit.php?post_type=acf-field-group');

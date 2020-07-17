@@ -16,10 +16,6 @@ add_action('admin_menu', function () {
     remove_submenu_page('options-general.php', 'options-media.php');
     remove_submenu_page('options-general.php', 'options-privacy.php');
     remove_submenu_page('options-general.php', 'options-writing.php');
-
-    if (!current_user_can('administrator')) {
-        remove_menu_page('plugins.php');
-    }
 });
 
 // Remove admin bar items

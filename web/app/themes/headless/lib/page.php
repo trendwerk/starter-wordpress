@@ -19,7 +19,7 @@ add_action('acf/init', function () use ($postType) {
                 'name' => 'seo_title',
                 'key' => 'field_seo_title',
                 'label' => 'Title',
-                'instructions' => 'Will display as "{title} - {sitename}" and page title will be used if left blank.',
+                'instructions' => 'Will display as "{title} - {sitename}". Page title will be used if left blank.',
                 'maxlength' => 60,
                 'type' => 'text',
             ],

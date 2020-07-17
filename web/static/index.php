@@ -9,6 +9,6 @@ League\Glide\ServerFactory::create([
     'base_url' => 'static',
     'cache' => $dir . '/web/app/uploads/.cache',
     'defaults' => ['fit' => 'crop', 'q' => 80],
-    'max_image_size' => 3840 * 3840,
+    'max_image_size' => 2560 * 2560, // See big_image_size_threshold filter
     'source' => $dir . '/web/app/uploads',
 ])->outputImage($path, $_GET);

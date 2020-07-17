@@ -2,7 +2,7 @@
   "name": "trendwerk/headless-wordpress",
   "type": "project",
   "license": "MIT",
-  "description": "Opinionated starter project to use WordPress as a headless CMS.",
+  "description": "Opinionated starter project to use WordPress as a headless CMS",
   "homepage": "https://trendwerk.nl",
   "authors": [
     {
@@ -43,19 +43,19 @@
   ],
   "require": {
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
-    "composer/installers": "^1.8",
+    "composer/installers": "*",
     "koodimonni-language/core-nl_nl": "*",
-    "oscarotero/env": "^1.2.0",
-    "php": ">=7.1",
+    "league/glide": "*",
+    "oscarotero/env": "*",
+    "php": ">=7.2",
+    "roots/bedrock-autoloader": "*",
     "roots/wordpress": "*",
     "roots/wp-config": "*",
     "roots/wp-password-bcrypt": "*",
-    "vlucas/phpdotenv": "^4.1.3",
-    "wpackagist-plugin/limit-login-attempts": "*",
-    "league/glide": "^1.6"
+    "vlucas/phpdotenv": "*",
+    "wpackagist-plugin/limit-login-attempts": "*"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.5.4",
     "roave/security-advisories": "dev-master"
   },
   "config": {
@@ -80,9 +80,6 @@
   "scripts": {
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
-    ],
-    "test": [
-      "phpcs"
     ]
   },
   "autoload": {

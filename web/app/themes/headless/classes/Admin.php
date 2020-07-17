@@ -57,6 +57,7 @@ class Admin
             require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
             activate_plugin('advanced-custom-fields-pro/acf.php');
+            activate_plugin('limit-login-attempts/limit-login-attempts.php');
         });
 
         // Go to pages overview after logging in,

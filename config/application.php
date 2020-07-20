@@ -31,7 +31,7 @@ $webroot_dir = $root_dir . '/web';
 $dotenv = Dotenv\Dotenv::createImmutable($root_dir);
 if (file_exists($root_dir . '/.env')) {
     $dotenv->load();
-    $dotenv->required(['WP_HOME']);
+    $dotenv->required(['WP_HOME', 'WP_URL']);
     if (!env('DATABASE_URL')) {
         $dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD']);
     }
@@ -46,6 +46,7 @@ define('WP_ENV', env('WP_ENV') ?: 'production');
 /**
  * URLs
  */
+Config::define('WP_URL', env('WP_URL'));
 Config::define('WP_HOME', env('WP_HOME'));
 Config::define('WP_SITEURL', env('WP_HOME') . '/wp');
 

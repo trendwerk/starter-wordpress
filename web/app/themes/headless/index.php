@@ -1,2 +1,2 @@
 <?php
-wp_redirect(get_rest_url(null, '/wp/v2/'));
+wp_redirect(empty($GLOBALS['wp']->request) ? WP_URL : WP_URL . '/' . $GLOBALS['wp']->request);

@@ -3,6 +3,11 @@ namespace Headless;
 
 $postType = 'page';
 
+// Remove post type support
+add_action('init', function () {
+    remove_post_type_support('page', 'page-attributes');
+});
+
 // Register custom fields
 add_action('acf/init', function () use ($postType) {
     acf_add_local_field_group([

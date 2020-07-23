@@ -12,8 +12,8 @@ $labels = [
 // Register post type
 add_action('init', function () use ($postType, $labels) {
     register_post_type($postType, [
-        'graphql_plural_name' => 'blogPosts',
-        'graphql_single_name' => 'blogPost',
+        'graphql_plural_name' => 'posts',
+        'graphql_single_name' => 'post',
         'has_archive' => true,
         'labels' => $labels,
         'menu_position' => 10,

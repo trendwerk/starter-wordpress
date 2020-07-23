@@ -12,13 +12,15 @@ $labels = [
 // Register post type
 add_action('init', function () use ($postType, $labels) {
     register_post_type($postType, [
-        'has_archive' => true,
+        'graphql_plural_name' => 'blogPosts',
+        'graphql_single_name' => 'blogPost',
         'labels' => $labels,
         'menu_position' => 10,
-        'public' => true,
         'rewrite' => ['slug' => $postType],
-        'supports' => ['editor', 'title'],
+        'show_in_graphql' => true,
         'show_in_rest' => true,
+        'show_ui' => true,
+        'supports' => ['editor', 'title'],
     ]);
 });
 

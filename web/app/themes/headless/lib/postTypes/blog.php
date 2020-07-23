@@ -4,9 +4,9 @@ namespace Headless;
 $postType = 'blog';
 
 $labels = [
-    'add_new' => __('New post', 'headless'),
+    'add_new' => __('New blog post', 'headless'),
     'name' => __('Blog', 'headless'),
-    'singular_name' => __('Post', 'headless'),
+    'singular_name' => __('Blog post', 'headless'),
 ];
 
 // Register post type

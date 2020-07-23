@@ -14,12 +14,13 @@ add_action('init', function () use ($postType, $labels) {
     register_post_type($postType, [
         'graphql_plural_name' => 'blogPosts',
         'graphql_single_name' => 'blogPost',
+        'has_archive' => true,
         'labels' => $labels,
         'menu_position' => 10,
+        'public' => true,
         'rewrite' => ['slug' => $postType],
         'show_in_graphql' => true,
         'show_in_rest' => true,
-        'show_ui' => true,
         'supports' => ['editor', 'title'],
     ]);
 });

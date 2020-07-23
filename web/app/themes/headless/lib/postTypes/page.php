@@ -18,7 +18,7 @@ add_action('init', function () use ($postType) {
 add_action('acf/init', function () use ($postType) {
     acf_add_local_field_group([
         'key' => $postType,
-        'title' => 'Page settings',
+        'title' => $labels['singular_name']  . ' settings',
         'fields' => [
             [
                 'key' => 'field_tab_header',
@@ -43,8 +43,8 @@ add_action('acf/init', function () use ($postType) {
             [
                 'name' => 'title',
                 'key' => 'field_title',
-                'label' => 'Title',
-                'instructions' => 'Will display as "{title} - {sitename}". Page title will be used if left blank.',
+                'label' => 'Page title',
+                'instructions' => 'Will display as "{title} - {sitename}". Title will be used if left blank.',
                 'maxlength' => 60,
                 'type' => 'text',
             ],

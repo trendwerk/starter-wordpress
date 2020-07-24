@@ -21,7 +21,7 @@ add_action('init', function () use ($postType, $labels) {
         'rewrite' => ['slug' => $postType],
         'show_in_graphql' => true,
         'show_in_rest' => true,
-        'supports' => ['editor', 'title'],
+        'supports' => ['title', 'editor', 'excerpt'],
     ]);
 });
 

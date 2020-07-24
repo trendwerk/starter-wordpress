@@ -14,7 +14,7 @@ if (! isset($_GET['q']) || ! $_GET['q']) {
 
 $search = sanitize_text_field($_GET['q']);
 $query = $GLOBALS['wpdb']->prepare(
-    "SELECT ID, post_name, post_title
+    "SELECT post_name, post_title
     FROM wp_posts
     INNER JOIN wp_postmeta
     ON wp_posts.ID = wp_postmeta.post_id

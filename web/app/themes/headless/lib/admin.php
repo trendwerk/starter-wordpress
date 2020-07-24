@@ -1,15 +1,18 @@
 <?php
 namespace Headless;
 
+// Remove default post type 'post'
+add_action('init', function () {
+    register_post_type('post', []);
+});
+
 // Remove and move admin menu items
 add_action('admin_menu', function () {
     moveMenuItem('edit.php?post_type=page', 5);
     moveMenuItem('themes.php', 62);
     moveMenuItem('upload.php', 61);
-
     remove_menu_page('edit-comments.php');
     remove_menu_page('edit.php?post_type=acf-field-group');
-    remove_menu_page('edit.php');
     remove_menu_page('index.php');
     remove_menu_page('tools.php');
     remove_submenu_page('options-general.php', 'options-discussion.php');
@@ -20,21 +23,26 @@ add_action('admin_menu', function () {
 
 // Remove admin bar items
 add_action('admin_bar_menu', function ($adminBar) {
-    $adminBar->remove_menu('new-post');
     $adminBar->remove_menu('comments');
     $adminBar->remove_menu('new-media');
     $adminBar->remove_menu('new-user');
 }, 100);
 
-// Remove update notice
+// Hide things in admin
 add_action('admin_head', function () {
     ?>
     <style>
+        #nav-menu-meta #add-category,
+        #nav-menu-meta #add-post_tag,
         #wp-admin-bar-updates {
             display: none !important;
         }
     </style>
     <?php
+});
+
+// Remove update notice
+add_action('admin_head', function () {
     remove_action('admin_notices', 'update_nag', 3);
 });
 

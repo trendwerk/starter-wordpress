@@ -16,7 +16,7 @@ add_action('graphql_register_types', function () {
         $postTypeName = get_post_type_object($postType)->graphql_single_name;
 
         // Summary
-        register_graphql_field($postTypeName, 'excerpt', [
+        register_graphql_field($postTypeName, 'summary', [
             'type' => 'String',
             'resolve' => function ($post) {
                 return get_the_excerpt(get_the_id($post));

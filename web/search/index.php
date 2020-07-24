@@ -3,6 +3,10 @@ define('SHORTINIT', true);
 
 require dirname(__DIR__) . '/wp/wp-load.php';
 
+$origin = strstr(WP_URL, 'http://localhost') ? '*' : WP_URL;
+
+header("Access-Control-Allow-Origin: {$origin}");
+
 if (! isset($_GET['q']) || ! $_GET['q']) {
     wp_send_json(['results' => []], 200);
     return;

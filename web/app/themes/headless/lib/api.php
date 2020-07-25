@@ -19,7 +19,7 @@ add_action('graphql_register_types', function () {
         register_graphql_field($postTypeName, 'summary', [
             'type' => 'String',
             'resolve' => function ($post) {
-                return get_the_excerpt(get_the_id($post));
+                return get_the_excerpt($post->ID);
             }
         ]);
 
@@ -27,7 +27,7 @@ add_action('graphql_register_types', function () {
         register_graphql_field($postTypeName, 'dateFormatted', [
             'type' => 'String',
             'resolve' => function ($post) {
-                return get_the_date('', get_the_id($post));
+                return get_the_date('', $post->ID);
             }
         ]);
     }

@@ -38,8 +38,8 @@ $results = array_map(function ($result) {
     $content = str_replace("\n", ' ', strip_tags($result['post_content']));
     $content = trim(preg_replace('/ ( +)/', ' ', $content));
 
-    if (strlen($content) > 200) {
-        $content = substr($content, 0, 200) . '…';
+    if (strlen($content) > 100) {
+        $content = trim(substr($content, 0, 100)) . '…';
     }
 
     return [

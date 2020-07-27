@@ -14,7 +14,7 @@ if (! isset($_GET['q']) || ! $_GET['q']) {
 
 $search = sanitize_text_field($_GET['q']);
 $query = $GLOBALS['wpdb']->prepare(
-    "SELECT post_name, post_title
+    "SELECT post_content, post_name, post_title
     FROM wp_posts
     INNER JOIN wp_postmeta
     ON wp_posts.ID = wp_postmeta.post_id
@@ -32,6 +32,21 @@ $query = $GLOBALS['wpdb']->prepare(
     $search,
     $search
 );
+
 $results = $GLOBALS['wpdb']->get_results($query, ARRAY_A) ?: [];
+$results = array_map(function ($result) {
+    $content = str_replace("\n", ' ', strip_tags($result['post_content']));
+    $content = trim(preg_replace('/ ( +)/', ' ', $content));
+
+    if (strlen($content) > 200) {
+        $content = substr($content, 0, 200) . '…';
+    }
+
+    return [
+        'summary' => $content,
+        'slug' => "/{$result['post_name']}",
+        'title' => $result['post_title'],
+    ];
+}, $results);
 
 wp_send_json(compact('results'), 200);

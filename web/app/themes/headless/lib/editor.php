@@ -15,15 +15,15 @@ add_action('after_setup_theme', function () {
 add_filter('allowed_block_types', function () {
     return [
         'core/buttons',
-        'core/embed',
-        'core/gallery',
+        // 'core/embed',
+        // 'core/gallery',
         'core/heading',
-        'core/html',
+        // 'core/html',
         'core/image',
         'core/list',
         'core/paragraph',
         'core/quote',
-        'core/table',
+        // 'core/table',
     ];
 });
 

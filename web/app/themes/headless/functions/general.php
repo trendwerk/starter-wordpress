@@ -1,14 +1,14 @@
 <?php
 namespace Headless;
 
-$name = 'site-settings';
-$title = __('Site settings', 'headless');
+$name = 'general-content';
+$title = __('General content', 'headless');
 
 add_action('acf/init', function() use ($name, $title) {
     acf_add_options_page([
         'menu_slug' => $name,
         'menu_title' => $title,
-        'page_title' => 'Site',
+        'page_title' => 'General',
         'position' => 59,
         'show_in_graphql' => true,
     ]);
@@ -102,6 +102,6 @@ add_action('acf/init', function() use ($name, $title) {
             'operator' => '==',
             'value' => $name,
         ]]],
-        'graphql_field_name' => 'settings'
+        'graphql_field_name' => 'fields'
     ]);
 });

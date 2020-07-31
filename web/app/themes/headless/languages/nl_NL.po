@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Headless\n"
-"POT-Creation-Date: 2020-07-31 15:28+0200\n"
-"PO-Revision-Date: 2020-07-31 15:28+0200\n"
+"POT-Creation-Date: 2020-07-31 15:53+0200\n"
+"PO-Revision-Date: 2020-07-31 15:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -33,6 +33,62 @@ msgstr "Media"
 msgid "Advanced"
 msgstr "Geavanceerd"
 
+#: functions/general.php:5
+msgid "General content"
+msgstr "Algemene inhoud"
+
+#: functions/general.php:22
+msgid "Contact details"
+msgstr "Contactgegevens"
+
+#: functions/general.php:29
+msgid "Company name"
+msgstr "Bedrijfsnaam"
+
+#: functions/general.php:35
+msgid "Address"
+msgstr "Adres"
+
+#: functions/general.php:41
+msgid "Zipcode"
+msgstr "Postcode"
+
+#: functions/general.php:47
+msgid "City"
+msgstr "Plaats"
+
+#: functions/general.php:53
+msgid "Email adddress"
+msgstr "E-mailadres"
+
+#: functions/general.php:59
+msgid "Telephone"
+msgstr "Telefoon"
+
+#: functions/general.php:65
+msgid "Social media"
+msgstr "Social media"
+
+#: functions/general.php:72
+msgid "Facebook profile"
+msgstr "Facebook profiel"
+
+#: functions/general.php:78
+msgid "Instagram profile"
+msgstr "Instagram profiel"
+
+#: functions/general.php:84
+msgid "LinkedIn profile"
+msgstr "LinkeIn profiel"
+
+#: functions/general.php:90
+msgid "Twitter profile"
+msgstr "Twitter profiel"
+
+#: functions/general.php:96
+msgid "YouTube profile"
+msgstr "YouTube profiel"
+
 #: functions/menus.php:6
 msgid "Main menu"
 msgstr "Hoofdmenu"
@@ -54,27 +110,26 @@ msgid "Blog post"
 msgstr "Blog artikel"
 
 #: functions/postTypes/blog.php:38 functions/postTypes/blog.php:61
-#: functions/settings.php:21 functions/settings.php:44
 msgid "Summary"
 msgstr "Samenvatting"
 
-#: functions/postTypes/blog.php:45 functions/settings.php:28
+#: functions/postTypes/blog.php:45
 msgid "Summary image"
 msgstr "Samenvatting afbeelding"
 
-#: functions/postTypes/blog.php:46 functions/settings.php:29
+#: functions/postTypes/blog.php:46
 msgid "Header image will be used if left blank."
 msgstr "Header afbeelding wordt gebruikt als dit veld niet is ingevuld."
 
-#: functions/postTypes/blog.php:54 functions/settings.php:37
+#: functions/postTypes/blog.php:54
 msgid "Summary title"
 msgstr "Samenvatting titel"
 
-#: functions/postTypes/blog.php:55 functions/settings.php:38
+#: functions/postTypes/blog.php:55
 msgid "Title will be used if left blank."
 msgstr "Titel wordt gebruikt als dit veld niet is ingevuld."
 
-#: functions/postTypes/blog.php:62 functions/settings.php:45
+#: functions/postTypes/blog.php:62
 msgid "Summary will be automatically generated based on content if left blank."
 msgstr ""
 "Samenvatting wordt automatisch gegenereerd als dit veld niet is ingevuld."
@@ -128,10 +183,6 @@ msgstr "Pagina’s"
 msgid "Page"
 msgstr "Pagina"
 
-#: functions/settings.php:5
-msgid "Site settings"
-msgstr "Site instellingen"
-
 #. Theme Name of the plugin/theme
 msgid "Headless"
 msgstr "Headless"
@@ -148,5 +199,5 @@ msgstr "Trendwerk"
 msgid "https://trendwerk.nl/"
 msgstr "https://trendwerk.nl/"
 
-#~ msgid "General content"
+#~ msgid "Site settings"
 #~ msgstr "Site instellingen"

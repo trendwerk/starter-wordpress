@@ -3,11 +3,20 @@ namespace Headless;
 
 // Replace image URL's in API to static folder
 add_action('init_graphql_request', function () {
-    add_filter('wp_get_attachment_image_src', function ($image) {
-        $image[0] = str_replace('app/uploads', 'static', $image[0]);
-
-        return $image;
+    add_filter('wp_get_attachment_url', function ($image) {
+        return replaceImageUrls($image);
     });
+
+    add_filter('the_content', function ($content) {
+        return replaceImageUrls($content);
+    });
+
+    function replaceImageUrls($content) {
+        $content = preg_replace('/(app\/uploads\/[^.]*)(-\d+[Xx]\d+)/', '$1', $content);
+        $content = str_replace('app/uploads', 'static', $content);
+
+        return $content;
+    }
 });
 
 // Add fields to all post types

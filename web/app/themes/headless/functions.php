@@ -10,3 +10,4 @@ require 'functions/excerpt.php';
 require 'functions/menus.php';
 require 'functions/postTypes/blog.php';
 require 'functions/postTypes/page.php';
+require 'functions/settings.php';

@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Headless\n"
+"POT-Creation-Date: 2020-07-31 14:57+0200\n"
+"PO-Revision-Date: 2020-07-31 15:02+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: nl_NL\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: functions/editor.php:37
+msgid "Text"
+msgstr "Tekst"
+
+#: functions/editor.php:41
+msgid "Media"
+msgstr "Media"
+
+#: functions/editor.php:45
+msgid "Advanced"
+msgstr "Geavanceerd"
+
+#: functions/menus.php:6
+msgid "Main menu"
+msgstr "Hoofdmenu"
+
+#: functions/menus.php:7
+msgid "Footer menu"
+msgstr "Footer menu"
+
+#: functions/postTypes/blog.php:7
+msgid "New blog post"
+msgstr "Nieuw blog artikel"
+
+#: functions/postTypes/blog.php:8
+msgid "Blog"
+msgstr "Blog"
+
+#: functions/postTypes/blog.php:9
+msgid "Blog post"
+msgstr "Blog artikel"
+
+#: functions/postTypes/blog.php:38 functions/postTypes/blog.php:61
+msgid "Summary"
+msgstr "Samenvatting"
+
+#: functions/postTypes/blog.php:45
+msgid "Summary image"
+msgstr "Samenvatting afbeelding"
+
+#: functions/postTypes/blog.php:46
+msgid "Header image will be used if left blank."
+msgstr "Header afbeelding wordt gebruikt als dit veld niet is ingevuld."
+
+#: functions/postTypes/blog.php:54
+msgid "Summary title"
+msgstr "Samenvatting titel"
+
+#: functions/postTypes/blog.php:55
+msgid "Title will be used if left blank."
+msgstr "Titel wordt gebruikt als dit veld niet is ingevuld."
+
+#: functions/postTypes/blog.php:62
+msgid "Summary will be automatically generated based on content if left blank."
+msgstr "Samenvatting wordt automatisch gegenereerd als dit veld niet is ingevuld."
+
+#: functions/postTypes/fields/header.php:5
+msgid "Header"
+msgstr "Header"
+
+#: functions/postTypes/fields/header.php:12
+msgid "Header image"
+msgstr "Header afbeelding"
+
+#: functions/postTypes/fields/seo.php:5
+msgid "SEO"
+msgstr "SEO"
+
+#: functions/postTypes/fields/seo.php:12
+msgid "Page title"
+msgstr "Pagina titel"
+
+#: functions/postTypes/fields/seo.php:13
+msgid "Will display as \"{title} - {sitename}\". Title will be used if left blank."
+msgstr "Wordt weergegeven als “{titel} - {sitaenaam}”. Titel wordt gebruikt als dit veld niet is ingevuld."
+
+#: functions/postTypes/fields/seo.php:20
+msgid "Meta description"
+msgstr "Meta omschrijving"
+
+#: functions/postTypes/fields/seo.php:21
+msgid "Page description in search engines and on social media."
+msgstr "Pagina omschrijving in zoekmachines en op social media."
+
+#: functions/postTypes/fields/seo.php:28
+msgid "Open Graph image"
+msgstr "Open Graph afbeelding"
+
+#: functions/postTypes/fields/seo.php:29
+msgid "Preview image on social media. Header image will be used if left blank."
+msgstr "Voorbeeld afbeelding op social media. Header afbeelding wordt gebruikt als dit veld niet is ingevuld."
+
+#: functions/postTypes/page.php:7
+msgid "Pages"
+msgstr "Pagina’s"
+
+#: functions/postTypes/page.php:8
+msgid "Page"
+msgstr "Pagina"
+
+#. Theme Name of the plugin/theme
+msgid "Headless"
+msgstr "Headless"
+
+#. Description of the plugin/theme
+msgid "Headless WordPress theme."
+msgstr "Headless WordPress thema."
+
+#. Author of the plugin/theme
+msgid "Trendwerk"
+msgstr "Trendwerk"
+
+#. Author URI of the plugin/theme
+msgid "https://trendwerk.nl/"
+msgstr "https://trendwerk.nl/"

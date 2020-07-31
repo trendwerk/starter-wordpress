@@ -1,6 +1,8 @@
 <?php
 namespace Headless;
 
+load_theme_textdomain('headless', get_template_directory() . '/languages');
+
 require 'functions/admin.php';
 require 'functions/api.php';
 require 'functions/editor.php';

@@ -35,15 +35,15 @@ add_action('acf/init', function () use ($postType, $labels) {
             [
                 [
                     'key' => 'field_tab_summary',
-                    'label' => 'Summary',
+                    'label' => ('Summary', 'headless'),
                     'placement' => 'left',
                     'type' => 'tab',
                 ],
                 [
                     'name' => 'summary_image',
                     'key' => 'field_summary_image',
-                    'label' => 'Summary image',
-                    'instructions' => 'Header image will be used if left blank.',
+                    'label' => ('Summary image', 'headless'),
+                    'instructions' => ('Header image will be used if left blank.', 'headless'),
                     'min_width' => 600,
                     'min_height' => 400,
                     'type' => 'image',
@@ -51,15 +51,15 @@ add_action('acf/init', function () use ($postType, $labels) {
                 [
                     'name' => 'summary_title',
                     'key' => 'field_summary_title',
-                    'label' => 'Summary title',
-                    'instructions' => 'Title will be used if left blank.',
+                    'label' => ('Summary title', 'headless'),
+                    'instructions' => ('Title will be used if left blank.', 'headless'),
                     'type' => 'text',
                 ],
                 [
                     'name' => 'summary',
                     'key' => 'field_summary',
-                    'label' => 'Summary',
-                    'instructions' => 'Summary will be automatically generated based on content if left blank.',
+                    'label' => ('Summary', 'headless'),
+                    'instructions' => ('Summary will be automatically generated based on content if left blank.', 'headless'),
                     'type' => 'textarea',
                 ],
             ],

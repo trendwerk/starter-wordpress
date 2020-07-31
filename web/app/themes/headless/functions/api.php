@@ -1,7 +1,7 @@
 <?php
 namespace Headless;
 
-// Replace image URL's in API to static folder
+// Replace image URL's to return full size images in static folder
 add_action('init_graphql_request', function () {
     add_filter('wp_get_attachment_url', function ($image) {
         return replaceImageUrls($image);

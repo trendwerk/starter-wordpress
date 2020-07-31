@@ -1,10 +1,10 @@
 <?php
 namespace Headless;
 
-require 'lib/admin.php';
-require 'lib/api.php';
-require 'lib/editor.php';
-require 'lib/excerpt.php';
-require 'lib/menus.php';
-require 'lib/postTypes/blog.php';
-require 'lib/postTypes/page.php';
+require 'functions/admin.php';
+require 'functions/api.php';
+require 'functions/editor.php';
+require 'functions/excerpt.php';
+require 'functions/menus.php';
+require 'functions/postTypes/blog.php';
+require 'functions/postTypes/page.php';

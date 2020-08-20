@@ -1,6 +1,8 @@
 <?php
 namespace Headless;
 
+use WPGraphQL\Data\Connection\PostObjectConnectionResolver as Resolver;
+
 // Replace image URL's to return full size images in static folder
 add_action('init_graphql_request', function () {
     add_filter('wp_get_attachment_url', function ($image) {
@@ -40,4 +42,33 @@ add_action('graphql_register_types', function () {
             }
         ]);
     }
+
+    register_graphql_connection([
+        'connectionArgs' => [[
+            'name' => 'template',
+            'type' => 'String',
+        ]],
+        'connectionTypeName' => 'TemplateConnection',
+        'fromFieldName' => 'pageByTemplate',
+        'fromType' => 'RootQuery',
+        'resolve' => function ($source, $args, $context, $info) {
+            $resolver = new Resolver($source, $args, $context, $info, 'page');
+
+            if (! isset($args['where'])) {
+                return $resolver->get_connection();
+            }
+
+            foreach (['page_on_front', 'page_for_posts'] as $key) {
+                if ($args['where']['template'] != $key) {
+                    continue;
+                }
+
+                $id = get_option($key);
+                $resolver->set_query_arg('post__in', [$id]);
+            }
+
+            return $resolver->get_connection();
+        },
+        'toType' => 'Page',
+    ]);
 });

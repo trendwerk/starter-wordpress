@@ -6,9 +6,7 @@ services:
   deployment:
     type: ruby
     build:
-      - gem install capistrano
-      - gem install capistrano-composer
-      - gem install capistrano-wpcli
+      - bundle install
 tooling:
   cap:
     service: deployment

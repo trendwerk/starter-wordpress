@@ -41,7 +41,7 @@ add_action('graphql_register_types', function () {
         ]);
         
         // Template type
-        register_graphql_field($postTypeName, 'type', [
+        register_graphql_field($postTypeName, 'templateType', [
             'type' => 'String',
             'resolve' => function ($post) {
                 foreach (['page_on_front', 'page_for_posts'] as $key) {

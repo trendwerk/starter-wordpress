@@ -28,15 +28,15 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.8.12",
+        "version": "5.8.14",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
           "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"
         },
         "require": {
-          "composer/installers": "^1.8",
-          "ffraenz/private-composer-installer": "^4.0"
+          "composer/installers": "*",
+          "ffraenz/private-composer-installer": "*"
         }
       }
     }

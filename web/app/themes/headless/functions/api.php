@@ -39,5 +39,19 @@ add_action('graphql_register_types', function () {
                 return get_the_date('', $post->ID);
             }
         ]);
+        
+        // Template type
+        register_graphql_field($postTypeName, 'type', [
+            'type' => 'String',
+            'resolve' => function ($post) {
+                foreach (['page_on_front', 'page_for_posts'] as $key) {
+                    if (get_option($key) == $post->ID) {
+                        return $key;
+                    }
+                }
+
+                return get_page_template_slug($post->ID) ?: 'page';
+            }
+        ]);
     }
 });

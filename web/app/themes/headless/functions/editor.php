@@ -46,14 +46,3 @@ add_filter('block_categories', function($categories) {
         ],
     ], $categories);
 });
-
-// Enqueue editor customisations file
-add_action('enqueue_block_editor_assets', function () {
-    wp_enqueue_script(
-        'editor-modifications',
-        get_stylesheet_directory_uri() . '/lib/editor.js',
-        ['wp-blocks', 'wp-dom'],
-        time(),
-        true
-    );
-});

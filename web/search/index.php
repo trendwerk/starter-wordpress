@@ -12,9 +12,10 @@ if (! isset($_GET['q']) || ! $_GET['q']) {
     return;
 }
 
+$home = get_option('page_on_front');
 $search = sanitize_text_field($_GET['q']);
 $query = $GLOBALS['wpdb']->prepare(
-    "SELECT post_content, post_name, post_title
+    "SELECT post_content, post_id, post_name, post_title
     FROM wp_posts
     INNER JOIN wp_postmeta
     ON wp_posts.ID = wp_postmeta.post_id
@@ -34,7 +35,7 @@ $query = $GLOBALS['wpdb']->prepare(
 );
 
 $results = $GLOBALS['wpdb']->get_results($query, ARRAY_A) ?: [];
-$results = array_map(function ($result) {
+$results = array_map(function ($result) use ($home) {
     $content = str_replace("\n", ' ', strip_tags($result['post_content']));
     $content = trim(preg_replace('/ ( +)/', ' ', $content));
 
@@ -44,7 +45,7 @@ $results = array_map(function ($result) {
 
     return [
         'summary' => $content,
-        'slug' => "/{$result['post_name']}",
+        'slug' => $result['post_id'] == $home ? "/" : "/{$result['post_name']}",
         'title' => $result['post_title'],
     ];
 }, $results);

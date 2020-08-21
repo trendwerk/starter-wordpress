@@ -60,9 +60,9 @@ add_filter('pings_open', '__return_false');
 add_action('after_switch_theme', function () {
     require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
-    activate_plugin('wp-graphql/wp-graphql-acf.php');
+    activate_plugin('wp-graphql-acf/wp-graphql-acf.php');
     activate_plugin('wp-graphql/wp-graphql.php');
-    activate_plugin('wp-graphql/wp-graphiql');
+    activate_plugin('wp-graphiql/wp-graphiql.php');
     activate_plugin('advanced-custom-fields-pro/acf.php');
     activate_plugin('limit-login-attempts/limit-login-attempts.php');
 });

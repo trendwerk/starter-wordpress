@@ -30,7 +30,7 @@ add_action('graphql_register_types', function () {
         register_graphql_field($postTypeName, 'summary', [
             'type' => 'String',
             'resolve' => function ($post) {
-                return get_the_excerpt($post->ID);
+                return html_entity_decode(get_the_excerpt($post->ID));
             }
         ]);
 

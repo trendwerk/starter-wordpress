@@ -23,6 +23,18 @@ add_action('init', function () use ($postType, $labels) {
         'show_in_rest' => true,
         'supports' => ['title', 'editor'],
     ]);
+
+    register_taxonomy('blog-category', $postType, [
+        'hierarchical' => true,
+        'show_in_graphql' => true,
+        'graphql_single_name' => 'blogCategory',
+        'graphql_plural_name' => 'blogCategories'
+    ]);
+    register_taxonomy('blog-tag', $postType, [
+        'show_in_graphql' => true,
+        'graphql_single_name' => 'blogTag',
+        'graphql_plural_name' => 'blogTags'
+    ]);
 });
 
 // Register custom fields
@@ -33,6 +45,32 @@ add_action('acf/init', function () use ($postType, $labels) {
         'fields' => array_merge(
             include 'fields/header.php',
             [
+                [
+                    'key' => 'field_tab_categories',
+                    'label' => __('Categories', 'headless'),
+                    'placement' => 'left',
+                    'type' => 'tab',
+                ],
+                [
+                    'name' => 'categories',
+                    'key' => 'field_categories',
+                    'label' => __('Categories', 'headless'),
+                    'type' => 'taxonomy',
+                    'taxonomy' => 'blog-category',
+                    'field_type' => 'checkbox',
+                    'load_terms' => true,
+                    'save_terms' => true,
+                ],
+                [
+                    'name' => 'tags',
+                    'key' => 'field_tags',
+                    'label' => __('Tags', 'headless'),
+                    'type' => 'taxonomy',
+                    'taxonomy' => 'blog-tag',
+                    'field_type' => 'multi_select',
+                    'load_terms' => true,
+                    'save_terms' => true,
+                ],
                 [
                     'key' => 'field_tab_summary',
                     'label' => __('Summary', 'headless'),

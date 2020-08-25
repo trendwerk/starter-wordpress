@@ -51,7 +51,7 @@ add_filter('block_categories', function($categories) {
 add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_script(
         'editor-modifications',
-        get_stylesheet_directory_uri() . '/lib/editor.js',
+        get_stylesheet_directory_uri() . '/functions/editor.js',
         ['wp-blocks', 'wp-dom'],
         time(),
         true

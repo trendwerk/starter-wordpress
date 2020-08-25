@@ -14,16 +14,15 @@ add_action('after_setup_theme', function () {
 // Hide all blocks except the following
 add_filter('allowed_block_types', function () {
     return [
+        'core-embed/vimeo',
+        'core-embed/youtube',
         'core/buttons',
         'core/embed',
-        // 'core/gallery',
         'core/heading',
-        // 'core/html',
         'core/image',
         'core/list',
         'core/paragraph',
         'core/quote',
-        // 'core/table',
     ];
 });
 

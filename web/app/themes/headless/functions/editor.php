@@ -27,26 +27,6 @@ add_filter('allowed_block_types', function () {
     ];
 });
 
-// // Add block categories
-add_filter('block_categories', function($categories) {
-    array_shift($categories);
-
-    return array_merge([
-        [
-            'slug' => 'text',
-            'title' => __('Text', 'headless'),
-        ],
-        [
-            'slug' => 'media',
-            'title' => __('Media', 'headless'),
-        ],
-        [
-            'slug' => 'advanced',
-            'title' => __('Advanced', 'headless'),
-        ],
-    ], $categories);
-});
-
 // Enqueue editor customisations file
 add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_script(

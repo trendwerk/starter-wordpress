@@ -7,8 +7,8 @@ return [
         'type' => 'tab',
     ],
     [
-        'name' => 'title',
-        'key' => 'field_title',
+        'name' => 'page_title',
+        'key' => 'field_page_title',
         'label' => __('Page title', 'headless'),
         'instructions' => __('Will display as "{title} - {sitename}". Title will be used if left blank.', 'headless'),
         'maxlength' => 60,

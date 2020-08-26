@@ -11,7 +11,7 @@ wp.hooks.addFilter('blocks.registerBlockType', 'headless', function(settings, na
   return settings;
 });
 
-// Remove block styles
+// Remove block styles and format types
 wp.domReady(() => {
   wp.blocks.unregisterBlockStyle('core/button', 'fill');
   wp.blocks.unregisterBlockStyle('core/button', 'outline');
@@ -19,4 +19,6 @@ wp.domReady(() => {
   wp.blocks.unregisterBlockStyle('core/image', 'rounded');
   wp.blocks.unregisterBlockStyle('core/quote', 'default');
   wp.blocks.unregisterBlockStyle('core/quote', 'large');
+  wp.richText.unregisterFormatType('core/code')
+  wp.richText.unregisterFormatType('core/image')
 });

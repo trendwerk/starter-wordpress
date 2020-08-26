@@ -46,8 +46,10 @@ add_action('admin_head', function () {
     remove_action('admin_notices', 'update_nag', 3);
 });
 
-// Remove unused image sizes
-add_filter('intermediate_image_sizes_advanced', '__return_empty_array');
+// Remove unused medium_large image size
+add_filter('intermediate_image_sizes', function($sizes) {
+    return array_diff($sizes, ['medium_large']);
+});
 
 // Remove footer text
 add_filter('admin_footer_text', '__return_false');

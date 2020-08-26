@@ -133,7 +133,7 @@ add_action('acf/init', function () use ($postType, $labels) {
                     'type' => 'tab',
                 ],
                 [
-                    'name' => 'title',
+                    'name' => $postType . '_blogtitle',
                     'key' => 'field_' . $postType . '_title',
                     'label' => __('Title', 'headless'),
                     'type' => 'text',

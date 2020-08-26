@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Headless\n"
-"POT-Creation-Date: 2020-08-26 15:50+0200\n"
-"PO-Revision-Date: 2020-08-26 15:50+0200\n"
+"POT-Creation-Date: 2020-08-26 16:01+0200\n"
+"PO-Revision-Date: 2020-08-26 16:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -154,13 +154,21 @@ msgid "Summary will be automatically generated based on content if left blank."
 msgstr ""
 "Samenvatting wordt automatisch gegenereerd als dit veld niet is ingevuld."
 
-#: functions/postTypes/blog.php:117
+#: functions/postTypes/blog.php:117 functions/postTypes/blog.php:125
 msgid "Archive settings"
 msgstr "Archief instellingen"
 
-#: functions/postTypes/blog.php:118 functions/postTypes/blog.php:125
-msgid "archive settings"
-msgstr "archief instellingen"
+#: functions/postTypes/blog.php:131
+msgid "Content"
+msgstr "Inhoud"
+
+#: functions/postTypes/blog.php:138
+msgid "Title"
+msgstr "Titel"
+
+#: functions/postTypes/blog.php:144
+msgid "Intro text"
+msgstr "Intro tekst"
 
 #: functions/postTypes/fields/header.php:5
 msgid "Header"
@@ -226,6 +234,9 @@ msgstr "Trendwerk"
 #. Author URI of the plugin/theme
 msgid "https://trendwerk.nl/"
 msgstr "https://trendwerk.nl/"
+
+#~ msgid "archive settings"
+#~ msgstr "archief instellingen"
 
 #~ msgid "Text"
 #~ msgstr "Tekst"

@@ -20,6 +20,7 @@ return [
         'label' => __('Meta description', 'headless'),
         'instructions' => __('Page description in search engines and on social media.', 'headless'),
         'maxlength' => 160,
+        'rows' => 4,
         'type' => 'textarea',
     ],
     [

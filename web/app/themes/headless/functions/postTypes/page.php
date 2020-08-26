@@ -18,7 +18,7 @@ add_action('init', function () use ($postType) {
 add_action('acf/init', function () use ($postType, $labels) {
     acf_add_local_field_group([
         'key' => $postType,
-        'title' => $labels['singular_name']  . ' settings',
+        'title' => $labels['singular_name']  . ' ' . __('settings', 'headless'),
         'fields' => array_merge(
             include 'fields/header.php',
             include 'fields/seo.php',

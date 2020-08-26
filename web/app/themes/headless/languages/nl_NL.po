@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Headless\n"
-"POT-Creation-Date: 2020-08-26 12:07+0200\n"
-"PO-Revision-Date: 2020-08-26 12:07+0200\n"
+"POT-Creation-Date: 2020-08-26 15:50+0200\n"
+"PO-Revision-Date: 2020-08-26 15:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -117,13 +117,17 @@ msgstr "Blog"
 msgid "Blog post"
 msgstr "Blog artikel"
 
+#: functions/postTypes/blog.php:44 functions/postTypes/page.php:21
+msgid "settings"
+msgstr "instellingen"
+
 #: functions/postTypes/blog.php:50 functions/postTypes/blog.php:57
 msgid "Categories"
 msgstr "Categorieën"
 
 #: functions/postTypes/blog.php:67
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 #: functions/postTypes/blog.php:76 functions/postTypes/blog.php:99
 msgid "Summary"
@@ -149,6 +153,14 @@ msgstr "Titel wordt gebruikt als dit veld niet is ingevuld."
 msgid "Summary will be automatically generated based on content if left blank."
 msgstr ""
 "Samenvatting wordt automatisch gegenereerd als dit veld niet is ingevuld."
+
+#: functions/postTypes/blog.php:117
+msgid "Archive settings"
+msgstr "Archief instellingen"
+
+#: functions/postTypes/blog.php:118 functions/postTypes/blog.php:125
+msgid "archive settings"
+msgstr "archief instellingen"
 
 #: functions/postTypes/fields/header.php:5
 msgid "Header"
@@ -223,6 +235,3 @@ msgstr "https://trendwerk.nl/"
 
 #~ msgid "Advanced"
 #~ msgstr "Geavanceerd"
-
-#~ msgid "Site settings"
-#~ msgstr "Site instellingen"

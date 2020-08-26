@@ -41,7 +41,7 @@ add_action('init', function () use ($postType, $labels) {
 add_action('acf/init', function () use ($postType, $labels) {
     acf_add_local_field_group([
         'key' => $postType,
-        'title' => $labels['singular_name']  . ' settings',
+        'title' => $labels['singular_name']  . ' ' . __('settings', 'headless'),
         'fields' => array_merge(
             include 'fields/header.php',
             [
@@ -107,6 +107,52 @@ add_action('acf/init', function () use ($postType, $labels) {
             'param' => 'post_type',
             'operator' => '==',
             'value' => $postType,
+        ]]],
+        'graphql_field_name' => 'fields'
+    ]);
+
+    // Archive settings
+    acf_add_options_page([
+        'menu_slug' => $postType . '-settings',
+        'menu_title' => __('Archive settings', 'headless'),
+        'page_title' => $labels['name'],
+        'parent_slug' => 'edit.php?post_type=blog',
+        'show_in_graphql' => true,
+    ]);
+
+    acf_add_local_field_group([
+        'key' => $postType . '-settings',
+        'title' => __('Archive settings', 'headless'),
+        'fields' => array_merge(
+            include 'fields/header.php',
+            [
+                [
+                    'key' => 'field_tab_' . $postType . '_content',
+                    'label' => __('Content', 'headless'),
+                    'placement' => 'left',
+                    'type' => 'tab',
+                ],
+                [
+                    'name' => 'title',
+                    'key' => 'field_' . $postType . '_title',
+                    'label' => __('Title', 'headless'),
+                    'type' => 'text',
+                ],
+                [
+                    'name' => 'content',
+                    'key' => 'field_' . $postType . '_content',
+                    'label' => __('Intro text', 'headless'),
+                    'type' => 'wysiwyg',
+                    'media_upload' => false,
+                    'tabs' => 'visual',
+                ],
+            ],
+            include 'fields/seo.php',
+        ),
+        'location' => [[[
+            'param' => 'options_page',
+            'operator' => '==',
+            'value' => $postType . '-settings',
         ]]],
         'graphql_field_name' => 'fields'
     ]);

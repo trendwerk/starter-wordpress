@@ -46,9 +46,25 @@ add_action('admin_head', function () {
     remove_action('admin_notices', 'update_nag', 3);
 });
 
-// Remove unused medium_large image size
-add_filter('intermediate_image_sizes', function($sizes) {
-    return array_diff($sizes, ['medium_large']);
+// Set image sizes
+add_filter('intermediate_image_sizes_advanced', function () {
+    return [
+        'thumbnail' => [
+            'crop' => true,
+            'height' => 150,
+            'width' => 150,
+        ],
+        'medium' => [
+            'crop' => false,
+            'height' => 300,
+            'width' => 300,
+        ],
+        'large' => [
+            'crop' => false,
+            'height' => 800,
+            'width' => 800,
+        ],
+    ];
 });
 
 // Remove footer text

@@ -190,7 +190,7 @@ msgstr "Pagina titel"
 msgid ""
 "Will display as \"{title} - {sitename}\". Title will be used if left blank."
 msgstr ""
-"Wordt weergegeven als “{titel} - {sitaenaam}”. Titel wordt gebruikt als dit "
+"Wordt weergegeven als “{titel} - {sitenaam}”. Titel wordt gebruikt als dit "
 "veld niet is ingevuld."
 
 #: functions/postTypes/fields/seo.php:20

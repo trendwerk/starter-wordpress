@@ -5,10 +5,11 @@ namespace Headless;
 add_action('after_setup_theme', function () {
     add_theme_support('disable-custom-colors');
     add_theme_support('disable-custom-font-sizes');
+    add_theme_support('disable-custom-gradients');
     add_theme_support('editor-color-palette', []);
     add_theme_support('editor-font-sizes', []);
     add_theme_support('editor-gradient-presets', []);
-    add_theme_support('disable-custom-gradients');
+    remove_theme_support('core-block-patterns');
 });
 
 // Hide all blocks except the following

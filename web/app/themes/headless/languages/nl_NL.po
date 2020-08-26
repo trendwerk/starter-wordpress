@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Headless\n"
-"POT-Creation-Date: 2020-07-31 15:53+0200\n"
-"PO-Revision-Date: 2020-07-31 15:54+0200\n"
+"POT-Creation-Date: 2020-08-26 10:41+0200\n"
+"PO-Revision-Date: 2020-08-26 10:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -20,18 +20,6 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-
-#: functions/editor.php:37
-msgid "Text"
-msgstr "Tekst"
-
-#: functions/editor.php:41
-msgid "Media"
-msgstr "Media"
-
-#: functions/editor.php:45
-msgid "Advanced"
-msgstr "Geavanceerd"
 
 #: functions/general.php:5
 msgid "General content"
@@ -82,10 +70,14 @@ msgid "LinkedIn profile"
 msgstr "LinkeIn profiel"
 
 #: functions/general.php:90
+msgid "Pinterest profile"
+msgstr "Pinterest profiel"
+
+#: functions/general.php:96
 msgid "Twitter profile"
 msgstr "Twitter profiel"
 
-#: functions/general.php:96
+#: functions/general.php:102
 msgid "YouTube profile"
 msgstr "YouTube profiel"
 
@@ -109,27 +101,35 @@ msgstr "Blog"
 msgid "Blog post"
 msgstr "Blog artikel"
 
-#: functions/postTypes/blog.php:38 functions/postTypes/blog.php:61
+#: functions/postTypes/blog.php:50 functions/postTypes/blog.php:57
+msgid "Categories"
+msgstr "Categorieën"
+
+#: functions/postTypes/blog.php:67
+msgid "Tags"
+msgstr ""
+
+#: functions/postTypes/blog.php:76 functions/postTypes/blog.php:99
 msgid "Summary"
 msgstr "Samenvatting"
 
-#: functions/postTypes/blog.php:45
+#: functions/postTypes/blog.php:83
 msgid "Summary image"
 msgstr "Samenvatting afbeelding"
 
-#: functions/postTypes/blog.php:46
+#: functions/postTypes/blog.php:84
 msgid "Header image will be used if left blank."
 msgstr "Header afbeelding wordt gebruikt als dit veld niet is ingevuld."
 
-#: functions/postTypes/blog.php:54
+#: functions/postTypes/blog.php:92
 msgid "Summary title"
 msgstr "Samenvatting titel"
 
-#: functions/postTypes/blog.php:55
+#: functions/postTypes/blog.php:93
 msgid "Title will be used if left blank."
 msgstr "Titel wordt gebruikt als dit veld niet is ingevuld."
 
-#: functions/postTypes/blog.php:62
+#: functions/postTypes/blog.php:100
 msgid "Summary will be automatically generated based on content if left blank."
 msgstr ""
 "Samenvatting wordt automatisch gegenereerd als dit veld niet is ingevuld."
@@ -198,6 +198,15 @@ msgstr "Trendwerk"
 #. Author URI of the plugin/theme
 msgid "https://trendwerk.nl/"
 msgstr "https://trendwerk.nl/"
+
+#~ msgid "Text"
+#~ msgstr "Tekst"
+
+#~ msgid "Media"
+#~ msgstr "Media"
+
+#~ msgid "Advanced"
+#~ msgstr "Geavanceerd"
 
 #~ msgid "Site settings"
 #~ msgstr "Site instellingen"

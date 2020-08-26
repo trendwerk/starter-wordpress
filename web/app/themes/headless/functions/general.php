@@ -85,6 +85,12 @@ add_action('acf/init', function() use ($name, $title) {
                 'type' => 'url',
             ],
             [
+                'name' => 'pinterest',
+                'key' => 'field_pinterest',
+                'label' => __('Pinterest profile', 'headless'),
+                'type' => 'url',
+            ],
+            [
                 'name' => 'twitter',
                 'key' => 'field_twitter',
                 'label' => __('Twitter profile', 'headless'),

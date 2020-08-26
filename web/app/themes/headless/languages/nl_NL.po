@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Headless\n"
-"POT-Creation-Date: 2020-08-26 10:41+0200\n"
-"PO-Revision-Date: 2020-08-26 10:42+0200\n"
+"POT-Creation-Date: 2020-08-26 12:07+0200\n"
+"PO-Revision-Date: 2020-08-26 12:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -86,6 +86,22 @@ msgid "Main menu"
 msgstr "Hoofdmenu"
 
 #: functions/menus.php:7
+msgid "Footer column 1"
+msgstr "Footer kolom 1"
+
+#: functions/menus.php:8
+msgid "Footer column 2"
+msgstr "Footer kolom 2"
+
+#: functions/menus.php:9
+msgid "Footer column 3"
+msgstr "Footer kolom 3"
+
+#: functions/menus.php:10
+msgid "Footer column 4"
+msgstr "Footer kolom 4"
+
+#: functions/menus.php:11
 msgid "Footer menu"
 msgstr "Footer menu"
 

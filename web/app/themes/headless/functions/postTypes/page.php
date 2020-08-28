@@ -11,7 +11,6 @@ $labels = [
 // Remove comments and page attributes
 add_action('init', function () use ($postType) {
     remove_post_type_support($postType, 'comments');
-    remove_post_type_support($postType, 'page-attributes');
 });
 
 // Register custom fields

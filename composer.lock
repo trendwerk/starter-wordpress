@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3a4af1223ae1b643172f7104e9779f2",
+    "content-hash": "c6864e32486d7a2831b1911ccfb0c8e9",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -1431,6 +1431,33 @@
             ],
             "description": "Advanced Custom Fields bindings for wp-graphql",
             "time": "2020-07-27T13:32:21+00:00"
+        },
+        {
+            "name": "wp-graphql/wp-graphql-tax-query",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-graphql/wp-graphql-tax-query.git",
+                "reference": "982827dca1e19be41415fe5a1f2da18e6590d421"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-graphql/wp-graphql-tax-query/zipball/982827dca1e19be41415fe5a1f2da18e6590d421",
+                "reference": "982827dca1e19be41415fe5a1f2da18e6590d421",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "WPGraphQL\\TaxQuery\\": "src"
+                }
+            },
+            "description": "Adds Tax_Query support to the WP GraphQL Plugin for postObject query args (WP_Query)",
+            "support": {
+                "source": "https://github.com/wp-graphql/wp-graphql-tax-query/tree/v0.1.0",
+                "issues": "https://github.com/wp-graphql/wp-graphql-tax-query/issues"
+            },
+            "time": "2019-10-28T21:52:38+00:00"
         },
         {
             "name": "wpackagist-plugin/limit-login-attempts",

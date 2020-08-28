@@ -39,6 +39,10 @@
           "ffraenz/private-composer-installer": "*"
         }
       }
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/wp-graphql/wp-graphql-tax-query"
     }
   ],
   "require": {
@@ -56,6 +60,7 @@
     "wp-graphql/wp-graphiql": "*",
     "wp-graphql/wp-graphql-acf": "*",
     "wp-graphql/wp-graphql": "*",
+    "wp-graphql/wp-graphql-tax-query": "*",
     "wpackagist-plugin/limit-login-attempts": "*"
   },
   "require-dev": {

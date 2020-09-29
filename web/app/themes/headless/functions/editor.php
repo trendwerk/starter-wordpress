@@ -20,6 +20,7 @@ add_filter('allowed_block_types', function () {
         'core/buttons',
         'core/embed',
         'core/heading',
+        'core/html',
         'core/image',
         'core/list',
         'core/paragraph',

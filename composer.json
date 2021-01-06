@@ -57,7 +57,6 @@
     "roots/wp-config": "*",
     "roots/wp-password-bcrypt": "*",
     "vlucas/phpdotenv": "^5.2",
-    "wp-graphql/wp-graphiql": "*",
     "wp-graphql/wp-graphql-acf": "*",
     "wp-graphql/wp-graphql": "*",
     "wp-graphql/wp-graphql-tax-query": "*",

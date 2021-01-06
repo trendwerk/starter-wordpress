@@ -58,8 +58,8 @@
     "roots/wp-password-bcrypt": "*",
     "vlucas/phpdotenv": "^5.2",
     "wp-graphql/wp-graphql-acf": "*",
-    "wp-graphql/wp-graphql": "*",
     "wp-graphql/wp-graphql-tax-query": "*",
+    "wp-graphql/wp-graphql": "v1.0.5",
     "wpackagist-plugin/limit-login-attempts": "*"
   },
   "require-dev": {

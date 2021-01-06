@@ -10,3 +10,23 @@ services:
 tooling:
   cap:
     service: deployment
+  pull-db-production:
+    service: appserver
+    cmd:
+      - wp db export -> db.sql --ssh=user@host:2223/path/to/current
+      - wp db import db.sql
+      - rm -f db.sql
+      - wp search-replace http://www.headless-wordpress.site https://headless-wordpress.lndo.site --skip-columns=guid
+      - wp plugin deactivate limit-login-attempts varnish-http-purge
+  push-db-production:
+    service: appserver
+    cmd:
+      - wp db export db.sql
+      - scp -P 2223 db.sql user@host:/path/to/current
+      - wp db import db.sql --ssh=user@host:2223/path/to/current
+      - rm -f db.sql
+      - wp search-replace https://headless-wordpress.lndo.site http://www.headless-wordpress.site --skip-columns=guid --ssh=user@host:2223/path/to/current
+  pull-uploads-production:
+    service: appserver
+    cmd:
+      - rsync -avz -e "ssh -p 2223" user@host:/path/to/current/web/app/uploads/ ./web/app/uploads

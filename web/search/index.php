@@ -3,7 +3,7 @@ define('SHORTINIT', true);
 
 require dirname(__DIR__) . '/wp/wp-load.php';
 
-$origin = strstr(WP_URL, 'http://localhost') ? '*' : WP_URL;
+$origin = strstr(SITE_URL, 'http://localhost') ? '*' : SITE_URL;
 
 header("Access-Control-Allow-Origin: {$origin}");
 

@@ -27,15 +27,14 @@
     {
       "type": "package",
       "package": {
-        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.9.3",
+        "name": "acf/advanced-custom-fields-pro",
+        "version": "5.9.4",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&t={%VERSION}&k={%ACF_PRO_KEY}"
         },
         "require": {
-          "composer/installers": "*",
           "ffraenz/private-composer-installer": "*"
         }
       }
@@ -46,7 +45,7 @@
     }
   ],
   "require": {
-    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "acf/advanced-custom-fields-pro": "*",
     "composer/installers": "*",
     "koodimonni-language/core-nl_nl": "*",
     "league/glide": "*",

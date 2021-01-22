@@ -135,5 +135,5 @@ msgid "Trendwerk"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://trendwerk.nl/"
+msgid "https://www.trendwerk.nl/"
 msgstr ""

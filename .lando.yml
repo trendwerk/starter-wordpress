@@ -4,6 +4,9 @@ config:
   php: '7.4'
   webroot: web
   xdebug: false
+services:
+  database:
+    portforward: 50001
 tooling:
   pull-db-production:
     service: appserver

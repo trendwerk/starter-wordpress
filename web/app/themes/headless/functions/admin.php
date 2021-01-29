@@ -80,10 +80,16 @@ add_action('after_switch_theme', function () {
 
     activate_plugin('advanced-custom-fields-pro/acf.php');
     activate_plugin('limit-login-attempts/limit-login-attempts.php');
-    activate_plugin('wp-graphiql/wp-graphiql.php');
     activate_plugin('wp-graphql-acf/wp-graphql-acf.php');
     activate_plugin('wp-graphql/wp-graphql-tax-query.php');
     activate_plugin('wp-graphql/wp-graphql.php');
+});
+
+// Replace home URL with SITE_URL
+add_action('admin_init', function () {
+    add_filter('home_url', function ($url) {
+        return str_replace(WP_HOME, SITE_URL, $url);
+    });
 });
 
 // Go to pages overview after logging in, instead of the dashboard

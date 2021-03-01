@@ -1,4 +1,4 @@
-name: SITENAME
+name: headless-wordpress
 recipe: wordpress
 config:
   php: '7.4'
@@ -14,7 +14,7 @@ tooling:
       - wp db export -> db.sql --ssh=USER@HOST:PORT/path/to/current
       - wp db import db.sql
       - rm -f db.sql
-      - wp search-replace https://SITENAME.com https://SITENAME.lndo.site --skip-columns=guid
+      - wp search-replace https://headless-wordpress.com https://headless-wordpress.lndo.site --skip-columns=guid
       - wp plugin deactivate limit-login-attempts varnish-http-purge
   push-db-production:
     service: appserver
@@ -23,7 +23,7 @@ tooling:
       - scp -P PORT db.sql USER@HOST:/path/to/current
       - wp db import db.sql --ssh=USER@HOST:PORT/path/to/current
       - rm -f db.sql
-      - wp search-replace https://SITENAME.lndo.site https://SITENAME.com --skip-columns=guid --ssh=USER@HOST:PORT/path/to/current
+      - wp search-replace https://headless-wordpress.lndo.site https://headless-wordpress.com --skip-columns=guid --ssh=USER@HOST:PORT/path/to/current
   pull-uploads-production:
     service: appserver
     cmd:

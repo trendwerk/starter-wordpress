@@ -1,7 +1,7 @@
 <?php
-namespace Headless;
+namespace Starter;
 
-load_theme_textdomain('headless', get_template_directory() . '/languages');
+load_theme_textdomain('starter', get_template_directory() . '/languages');
 
 require 'functions/admin.php';
 require 'functions/api.php';

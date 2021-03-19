@@ -1,11 +1,11 @@
 <?php
-namespace Headless;
+namespace Starter;
 
 $postType = 'page';
 
 $labels = [
-    'name' => __('Pages', 'headless'),
-    'singular_name' => __('Page', 'headless'),
+    'name' => __('Pages', 'starter'),
+    'singular_name' => __('Page', 'starter'),
 ];
 
 // Remove comments and page attributes
@@ -17,7 +17,7 @@ add_action('init', function () use ($postType) {
 add_action('acf/init', function () use ($postType, $labels) {
     acf_add_local_field_group([
         'key' => $postType,
-        'title' => $labels['singular_name']  . ' ' . __('settings', 'headless'),
+        'title' => $labels['singular_name']  . ' ' . __('settings', 'starter'),
         'fields' => array_merge(
             include 'fields/header.php',
             include 'fields/seo.php',

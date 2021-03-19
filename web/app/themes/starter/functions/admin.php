@@ -1,5 +1,5 @@
 <?php
-namespace Headless;
+namespace Starter;
 
 // Remove default post type 'post'
 add_action('init', function () {

@@ -1,5 +1,5 @@
 <?php
-namespace Headless;
+namespace Starter;
 
 // Modify excerpt length
 add_filter('excerpt_length', function () {

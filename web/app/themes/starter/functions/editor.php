@@ -1,5 +1,5 @@
 <?php
-namespace Headless;
+namespace Starter;
 
 // Disable custom colors and font sizes
 add_action('after_setup_theme', function () {

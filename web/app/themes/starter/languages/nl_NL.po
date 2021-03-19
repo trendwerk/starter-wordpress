@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Headless\n"
+"Project-Id-Version: Starter\n"
 "POT-Creation-Date: 2020-08-26 16:06+0200\n"
 "PO-Revision-Date: 2020-08-26 16:06+0200\n"
 "Last-Translator: \n"
@@ -220,12 +220,12 @@ msgid "Page"
 msgstr "Pagina"
 
 #. Theme Name of the plugin/theme
-msgid "Headless"
-msgstr "Headless"
+msgid "Starter"
+msgstr "Starter"
 
 #. Description of the plugin/theme
-msgid "Headless WordPress theme."
-msgstr "Headless WordPress thema."
+msgid "Starter WordPress theme."
+msgstr "Starter WordPress thema."
 
 #. Author of the plugin/theme
 msgid "Trendwerk"

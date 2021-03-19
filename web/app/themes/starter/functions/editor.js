@@ -3,7 +3,7 @@ var categories = {
   'core/buttons': 'text',
 };
 
-wp.hooks.addFilter('blocks.registerBlockType', 'headless', function(settings, name) {
+wp.hooks.addFilter('blocks.registerBlockType', 'starter', function(settings, name) {
   if (categories[name]) {
     settings.category = categories[name];
   }

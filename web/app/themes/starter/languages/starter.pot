@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Headless\n"
+"Project-Id-Version: Starter\n"
 "POT-Creation-Date: 2020-07-31 14:57+0200\n"
 "PO-Revision-Date: 2020-07-31 14:53+0200\n"
 "Last-Translator: \n"
@@ -123,11 +123,11 @@ msgid "Page"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Headless"
+msgid "Starter"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Headless WordPress theme."
+msgid "Starter WordPress theme."
 msgstr ""
 
 #. Author of the plugin/theme

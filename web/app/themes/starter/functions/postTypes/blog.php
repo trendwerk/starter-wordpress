@@ -1,12 +1,12 @@
 <?php
-namespace Headless;
+namespace Starter;
 
 $postType = 'blog';
 
 $labels = [
-    'add_new' => __('New blog post', 'headless'),
-    'name' => __('Blog', 'headless'),
-    'singular_name' => __('Blog post', 'headless'),
+    'add_new' => __('New blog post', 'starter'),
+    'name' => __('Blog', 'starter'),
+    'singular_name' => __('Blog post', 'starter'),
 ];
 
 // Register post type
@@ -41,20 +41,20 @@ add_action('init', function () use ($postType, $labels) {
 add_action('acf/init', function () use ($postType, $labels) {
     acf_add_local_field_group([
         'key' => $postType,
-        'title' => $labels['singular_name']  . ' ' . __('settings', 'headless'),
+        'title' => $labels['singular_name']  . ' ' . __('settings', 'starter'),
         'fields' => array_merge(
             include 'fields/header.php',
             [
                 [
                     'key' => 'field_tab_categories',
-                    'label' => __('Categories', 'headless'),
+                    'label' => __('Categories', 'starter'),
                     'placement' => 'left',
                     'type' => 'tab',
                 ],
                 [
                     'name' => 'categories',
                     'key' => 'field_categories',
-                    'label' => __('Categories', 'headless'),
+                    'label' => __('Categories', 'starter'),
                     'type' => 'taxonomy',
                     'taxonomy' => 'blog-category',
                     'field_type' => 'checkbox',
@@ -64,7 +64,7 @@ add_action('acf/init', function () use ($postType, $labels) {
                 [
                     'name' => 'tags',
                     'key' => 'field_tags',
-                    'label' => __('Tags', 'headless'),
+                    'label' => __('Tags', 'starter'),
                     'type' => 'taxonomy',
                     'taxonomy' => 'blog-tag',
                     'field_type' => 'multi_select',
@@ -73,15 +73,15 @@ add_action('acf/init', function () use ($postType, $labels) {
                 ],
                 [
                     'key' => 'field_tab_summary',
-                    'label' => __('Summary', 'headless'),
+                    'label' => __('Summary', 'starter'),
                     'placement' => 'left',
                     'type' => 'tab',
                 ],
                 [
                     'name' => 'summary_image',
                     'key' => 'field_summary_image',
-                    'label' => __('Summary image', 'headless'),
-                    'instructions' => __('Header image will be used if left blank.', 'headless'),
+                    'label' => __('Summary image', 'starter'),
+                    'instructions' => __('Header image will be used if left blank.', 'starter'),
                     'min_width' => 600,
                     'min_height' => 400,
                     'type' => 'image',
@@ -89,15 +89,15 @@ add_action('acf/init', function () use ($postType, $labels) {
                 [
                     'name' => 'summary_title',
                     'key' => 'field_summary_title',
-                    'label' => __('Summary title', 'headless'),
-                    'instructions' => __('Title will be used if left blank.', 'headless'),
+                    'label' => __('Summary title', 'starter'),
+                    'instructions' => __('Title will be used if left blank.', 'starter'),
                     'type' => 'text',
                 ],
                 [
                     'name' => 'summary',
                     'key' => 'field_summary',
-                    'label' => __('Summary', 'headless'),
-                    'instructions' => __('Summary will be automatically generated based on content if left blank.', 'headless'),
+                    'label' => __('Summary', 'starter'),
+                    'instructions' => __('Summary will be automatically generated based on content if left blank.', 'starter'),
                     'type' => 'textarea',
                 ],
             ],
@@ -114,7 +114,7 @@ add_action('acf/init', function () use ($postType, $labels) {
     // Archive settings
     acf_add_options_page([
         'menu_slug' => $postType . '-settings',
-        'menu_title' => __('Archive settings', 'headless'),
+        'menu_title' => __('Archive settings', 'starter'),
         'page_title' => $labels['name'],
         'parent_slug' => 'edit.php?post_type=blog',
         'show_in_graphql' => true,
@@ -122,26 +122,26 @@ add_action('acf/init', function () use ($postType, $labels) {
 
     acf_add_local_field_group([
         'key' => $postType . '-settings',
-        'title' => __('Archive settings', 'headless'),
+        'title' => __('Archive settings', 'starter'),
         'fields' => array_merge(
             include 'fields/header.php',
             [
                 [
                     'key' => 'field_tab_' . $postType . '_content',
-                    'label' => __('Content', 'headless'),
+                    'label' => __('Content', 'starter'),
                     'placement' => 'left',
                     'type' => 'tab',
                 ],
                 [
                     'name' => 'title',
                     'key' => 'field_' . $postType . '_title',
-                    'label' => __('Title', 'headless'),
+                    'label' => __('Title', 'starter'),
                     'type' => 'text',
                 ],
                 [
                     'name' => 'content',
                     'key' => 'field_' . $postType . '_content',
-                    'label' => __('Intro text', 'headless'),
+                    'label' => __('Intro text', 'starter'),
                     'type' => 'wysiwyg',
                     'media_upload' => false,
                     'tabs' => 'visual',

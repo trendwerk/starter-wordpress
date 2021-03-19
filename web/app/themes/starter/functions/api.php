@@ -1,5 +1,5 @@
 <?php
-namespace Headless;
+namespace Starter;
 
 use WPGraphQL\Data\Connection\PostObjectConnectionResolver as Resolver;
 

@@ -1,2 +1,0 @@
-server '', user: '', roles: 'deploy', port: 22
-set :deploy_to, ''

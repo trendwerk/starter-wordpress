@@ -36,15 +36,15 @@ cat id_rsa.pub >> ~/.ssh/known_hosts
 
 Changes to the master branch will now be automatically deployed to the server. Or you can run `dep deploy production` on your local machine to deploy.
 
-## Depoyer commands
+## Depoyer tasks
 
-You can use the following custom commands to SSH into the database or pull or push the database and uploads from and to the remote server:
+You can use the following tasks to SSH into the database or pull or push the database and uploads from and to the remote server:
 
 - Deploy to production: `dep deploy production`
-- SSH into server: `dep ssh`
 - Pull database: `dep db:pull production`
 - Push database: `dep db:push production`
 - Pull uploads: `dep uploads:pull production`
 - Push uploads: `dep uploads:push production`
+- SSH into server: `dep ssh`
 
-Check [Deployer.org](https://deployer.org/docs/cli.html) for more info on the CLI usage.
+You can find more info on [CLI usage](https://deployer.org/docs/cli.html) on the Deployer website.

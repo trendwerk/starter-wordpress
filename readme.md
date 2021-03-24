@@ -18,16 +18,17 @@
 
 Follow the following steps to setup deployment via Deployer:
 
-1. Set `application`, `repository`, `host` and other variables in `deploy.php`
+1. Install deployer (instructions: https://deployer.org/docs/installation.html)
 
-2. SSH into the remote server (`dep ssh`)
+2. Set `application`, `repository`, `host` and other variables in `deploy.php`
 
-3. Create a `.env` file in the `shared` folder and add the required constants
+3. SSH into the remote server (`dep ssh`)
 
-4. Run `dep deploy production` on your local machine
+4. Create a `.env` file in the `shared` folder and add the required constants
 
+5. Run `dep deploy production` on your local machine
 
-## Automatic deploymen via Github Actions
+# Automatic deployment via Github Actions
 
 Follow the following steps to setup automatic deployment via Github Actions:
 
@@ -50,4 +51,4 @@ cat id_rsa.pub >> ~/.ssh/known_hosts
 
 6. Go to Secrets and add `PRIVATE_KEY` (run `cat id_rsa` on remote server)
 
-7. Go to Secrets and add `PUBLIC_KEY` (run `cat id_rsa.pub` on remote server)
+7. Do something with `KNOWN_HOSTS`??? (I'm stil working on this...)

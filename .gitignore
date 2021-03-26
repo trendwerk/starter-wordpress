@@ -4,7 +4,6 @@
 *.log
 /vendor
 production.rb
-web/.htaccess
 web/app/languages/*
 web/app/mu-plugins/*/
 web/app/plugins/*

@@ -1,7 +1,7 @@
 <?php
 namespace Starter;
 
-add_action('admin-init', function () {
+add_action('after_setup_theme', function () {
     // Modify editor capabilities
     $editor = get_role('editor');
 

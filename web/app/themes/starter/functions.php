@@ -11,3 +11,4 @@ require 'functions/general.php';
 require 'functions/menus.php';
 require 'functions/postTypes/blog.php';
 require 'functions/postTypes/page.php';
+require 'functions/users.php';

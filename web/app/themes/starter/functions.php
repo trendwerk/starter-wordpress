@@ -12,3 +12,6 @@ require 'functions/menus.php';
 require 'functions/postTypes/blog.php';
 require 'functions/postTypes/page.php';
 require 'functions/users.php';
+
+// Disable xmlrpc.php
+add_filter('xmlrpc_enabled', '__return_false');

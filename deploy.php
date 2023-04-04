@@ -63,6 +63,9 @@ task('db:pull', function () {
 
 // Push database
 task('db:push', function () {
+    $sure = askConfirmation("Are you sure you want to overwite the remote database?", false);
+    if (!$sure) { die('Task aborted.'); }
+
     runLocally('wp db export db.sql');
     runLocally('scp -P {{port}} db.sql {{user}}@{{host}}:{{path}}/current/web');
     run('cd {{path}}/current/web && wp db import db.sql');

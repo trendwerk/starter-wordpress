@@ -15,3 +15,5 @@ require 'functions/users.php';
 
 // Disable xmlrpc.php
 add_filter('xmlrpc_enabled', '__return_false');
+if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) )
+    exit;
